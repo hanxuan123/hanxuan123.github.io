@@ -324,60 +324,21 @@
       
         
           
-            <ul>
-<li>git init：把当前目录变成可管理的仓库.</li>
-<li>git add file : 吧文件添加到暂存区.</li>
-<li>git commit -m “本次提交的说明” : 提交文件到仓库.</li>
-<li>git status : 查看仓库当前状态.</li>
-<li>git diff file : 查看文件修改的内容.</li>
-<li>git log : 显示最近到最远的提交日志.</li>
-<li>git log –pretty=online : 减少输出信息显示日志.</li>
-<li>git reset –hard HEAD^ （HEAD~100)：回退上一个版本.</li>
-<li>git reset –hard + commit id : 指定到确定id版本</li>
-<li>git checkout –file : 撤销文件在工作区(本地文件)修改</li>
-<li>git reset HEAD file : 撤销暂存区修改</li>
-<li>从版本库删除文件(即git commit之后) : git rm file 然后 git commit -m “提交说明”.</li>
-<li>git remote add origin git@github.com:github用户名/github仓库名.git : 关联自己github远程仓库</li>
-<li>git push -u origin master : 将本地仓库内容推送到远程仓库(第一次推送加上了-u参数之后不需要).</li>
-<li>git clone git@github.com:用户名/仓库名.git : 把远程库内容克隆到本地仓库.</li>
-<li>git branch dev:创建分支dev.</li>
-<li>git checkout dev:切换分支dev.</li>
-<li>git checkout -b dev:创建并切换分支dev.</li>
-<li>git branch:查看当前分支.</li>
-<li>git merge:合并指定分支到当前分支上.</li>
-<li>git branch -d dev:删除dev分支.</li>
-<li>git log –graph –pretty=oneline –abbrev-commit. 以图的形式查看分支</li>
-<li>git merge –no–ff -m “merge with no-ff” dev:禁用 fast forward模式合并dev分支</li>
-<li>git stash:储存当前分支.即用git status查看时干净的</li>
-<li>git stash list:查看被git stash储存的分支</li>
-<li>git stash apply:恢复被储存的分支</li>
-<li>git stash drop:删除stash内容(即git stash list 可以查看到内容)</li>
-<li>git stash pop:恢复被储存分支并且删除stash内容</li>
-<li>git stash apply stash@{0}:恢复指定stash.</li>
-<li>git branch -D feature-vulcan:强行删除分支(这个分支是add 然后commit 之后但为merge).</li>
-<li>git remote:查看远程库信息</li>
-<li>git remote -v:显示更详细的信息</li>
-<li>git push origin dev:向远程库推送dev分支</li>
-<li>git check -b dev origin/dev 创建远程的origin的dev分支到本地</li>
-<li>git pul:把最新的提交从远程库抓下来</li>
-<li>git branch –set-upstream dev origin/dev 指定本地dev与远程 origin/dev分支链接</li>
-<li>git tag v1.0:给当前分支下的commit打标签</li>
-<li>git tag:查看所有标签</li>
-<li>git tag v0.9 6224937:给commit id 为6224937标签</li>
-<li>git show <tagname>:查看标签信息</tagname></li>
-<li>git tag -a v0.1 -m “version 0.1 released” 3628164</li>
-<li>git tag -s v0.2 -m “signed version 0.2 released” fec145a:通过-s用私钥签名一个标签(必须首先按照gpg)</li>
-<li>git tag -d v0.1:删除标签</li>
-<li>git push origin v1.0:推送标签到远程</li>
-<li>git push origin –tags:一次性推送到远程</li>
-<li>删除远程标签:先git tag -d v0.9,然后git push origin :refs/tags/v0.9</li>
-<li>git config –global color.ui true:让git显示颜色</li>
-<li>忽略特殊文件: 详情参考<a href="https://www.liaoxuefeng.com/wiki/0013739516305929606dd18361248578c67b8067c8c017b000/0013758404317281e54b6f5375640abbb11e67be4cd49e0000" target="_blank" rel="external">https://www.liaoxuefeng.com/wiki/0013739516305929606dd18361248578c67b8067c8c017b000/0013758404317281e54b6f5375640abbb11e67be4cd49e0000</a></li>
-<li>配置别名: git config –global alias.st status</li>
-<li>还有:git config –global alias.lg “log –color –graph –pretty=format:’%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)&lt;%an&gt;%Creset’ –abbrev-commit”</li>
-</ul>
-
           
+git init：把当前目录变成可管理的仓库.
+git add file : 吧文件添加到暂存区.
+git commit -m “本次提交的说明” : 提交文件到仓库.
+git status : 查看仓库当前状态.
+git diff file : 查看文件修改的内容.
+git log : 显示最近
+          ...
+          <!--noindex-->
+          <div class="post-button text-center">
+            <a class="btn" href="/2017/07/31/git的一些常用命令/#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
+          <!--/noindex-->
         
       
     </div>
@@ -487,11 +448,18 @@
       
         
           
-            <p>作为一个学生的迷茫</p>
-<hr>
-<p>因为好多东西没经历过，不断重复的学习也只是在搬砖，因此打算在今天记录下自己每天的收获，至少可以回顾过去不在迷茫.</p>
+          作为一个学生的迷茫
+
+因为好多东西没经历过，不断重复的学习也只是在搬砖，因此打算在今天记录下自己每天的收获，至少可以回顾过去不在迷茫.
 
           
+          <!--noindex-->
+          <div class="post-button text-center">
+            <a class="btn" href="/2017/07/30/记录生活点滴/#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
+          <!--/noindex-->
         
       
     </div>
