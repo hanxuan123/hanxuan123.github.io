@@ -1,0 +1,642 @@
+<!DOCTYPE html>
+
+
+
+  
+
+
+<html class="theme-next muse use-motion" lang="zh-Hans">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+
+
+
+
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+
+
+
+
+  
+  
+  
+  
+
+  
+    
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+    
+    
+    <link href="//fonts.googleapis.com/css?family=Lato:300,300italic,400,400italic,700,700italic&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+  
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=5.1.1" rel="stylesheet" type="text/css" />
+
+
+  <meta name="keywords" content="Hexo, NexT" />
+
+
+
+
+
+
+
+
+  <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?v=5.1.1" />
+
+
+
+
+
+
+<meta name="description" content="暑假马上就结束了，大二一年也就过去了，时间走的真的很快，在这里写下今年的总结，希望以后每年也都能这样记录自己的生活。去年暑假决定做的java，不过来学校一个月后发生了改变，也是因为班级要求选导师，然后和一些人的交流才决定了改变吧，不过开学第一个月倒真的什么都没做来着蛮可惜的，那时候还没意识到时间的严重性吧。 十一回来后，开始打算做机器视觉，opencv似乎装了3,4天才弄好，后面还在csdn上写了">
+<meta property="og:type" content="article">
+<meta property="og:title" content="大二总结">
+<meta property="og:url" content="http://yoursite.com/2018/08/29/大二总结/index.html">
+<meta property="og:site_name" content="逸轩的个人博客">
+<meta property="og:description" content="暑假马上就结束了，大二一年也就过去了，时间走的真的很快，在这里写下今年的总结，希望以后每年也都能这样记录自己的生活。去年暑假决定做的java，不过来学校一个月后发生了改变，也是因为班级要求选导师，然后和一些人的交流才决定了改变吧，不过开学第一个月倒真的什么都没做来着蛮可惜的，那时候还没意识到时间的严重性吧。 十一回来后，开始打算做机器视觉，opencv似乎装了3,4天才弄好，后面还在csdn上写了">
+<meta property="og:updated_time" content="2018-08-29T14:10:18.056Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="大二总结">
+<meta name="twitter:description" content="暑假马上就结束了，大二一年也就过去了，时间走的真的很快，在这里写下今年的总结，希望以后每年也都能这样记录自己的生活。去年暑假决定做的java，不过来学校一个月后发生了改变，也是因为班级要求选导师，然后和一些人的交流才决定了改变吧，不过开学第一个月倒真的什么都没做来着蛮可惜的，那时候还没意识到时间的严重性吧。 十一回来后，开始打算做机器视觉，opencv似乎装了3,4天才弄好，后面还在csdn上写了">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Muse',
+    sidebar: {"position":"left","display":"post","offset":12,"offset_float":0,"b2t":false,"scrollpercent":false,"onmobile":false},
+    fancybox: true,
+    motion: true,
+    duoshuo: {
+      userId: '0',
+      author: '博主'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="http://yoursite.com/2018/08/29/大二总结/"/>
+
+
+
+
+
+  <title>大二总结 | 逸轩的个人博客</title>
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left page-post-detail ">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/"  class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">逸轩的个人博客</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <p class="site-subtitle"></p>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
+            
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
+            
+            归档
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
+            
+            标签
+          </a>
+        </li>
+      
+
+      
+    </ul>
+  
+
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/08/29/大二总结/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="逸轩">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/uploads/touxiang.png">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="逸轩的个人博客">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">大二总结</h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-08-29T20:59:26+08:00">
+                2018-08-29
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <p>暑假马上就结束了，大二一年也就过去了，时间走的真的很快，在这里写下今年的总结，希望以后每年也都能这样记录自己的生活。<br><em>去年暑假决定做的java，不过来学校一个月后发生了改变，也是因为班级要求选导师，然后和一些人的交流才决定了改变吧，不过开学第一个月倒真的什么都没做来着蛮可惜的，那时候还没意识到时间的严重性吧。
+</em>十一回来后，开始打算做机器视觉，opencv似乎装了3,4天才弄好，后面还在csdn上写了篇安装教程，今年看居然有5000多的阅读量，蛮惊讶的，也是因为这整个学期的课程比较紧凑吧，那时候做的事情好像也就在11月不知道几号钱读完了并且实践了毛星云的opencv一个系列的教程吧，不过当我打下这些字的时候好像忘得差不多了，好像也是从那段时间开始有刷leetcode吧，这个倒是一个不错的开始。<br><em>10月份到11月份中旬好像吧，那个导师才开始联系我们，结果突然表明一下子不来机器视觉了，搞嵌入式了…..不过没办法，就跟着划水了，划了一段时间发现不行，好像不知道什么原因就自己开始学机器学习了，开始了看ng的机器学习了,然后也是这段时间自己有保持写leetcode的习惯吧,后面到了1月份好像也就快期末考试了，好像就开始复习了，当然自己也没有想过考好，自然考的就蛮差的不过也没什么，本来的目标就是过了就好了，所幸没有挂科。这似乎就是上半个学期做的事情了。哦突然记起来了，为什么感觉时间这么紧凑，TM的学校从开学开始就搞了什么运动会开幕式，还TM从9月份开始到11月份结束，<br>真的是浪费了不知道多少人的时间。
+</em>之后便是来到了大二的寒假，寒假自己做的事情虽然有些记不清，但因为每天都是在重复，还是能说的蛮清楚的吧，好像就是吴恩达机器学习课程 + leetcode + 看番，按理说因该是看了蛮多的动漫的，<br>毕竟一开始我可是打算寒假结束ng的课程的..最后好像只学到了svm这里不过倒是有用笔谢了蛮多的笔记的，感觉这因该是从大学到现在写字最多的时候了，然后寒假也就结束了，感觉也蛮充实的不过这些感觉也都是当时的感觉了<br><em>来到了大二下学期，个人也紧张了起来了，3月份开始加快马力刷ng课程，然后依旧保持leetcode，不过忘记了什么原因了，好像4月0几号才刷完..，然后开始看西瓜书和机器学习实战,西瓜书好像看到了svm哪里看不动了，也好像是自己先开始码机器学习实战的代码了，不过代码好像也只是码到了smo那里…哦对了，记起来了，那个时候是开始打算打比赛，结果看了腾讯广告算法大赛对电脑的要求，结果就暴毙了..然后就天天看群里面大佬谈笑风生…不过那时候好像也转向刷剑指offer了，好像直到5月份前干的事情就是这些了，后面的话找了个简单的o2o已经结束了比赛看了下，跑了下开源，看了下代码，然后好像就开始看了一系列的爬虫教程，然后边刷sql嗯没错，然后的话到了5月底的话，好像就懒了下来，以为时间够，不够的话也可以考个研搞机器学习来着？？？，然后就是复习准备考试，6月整个月好像都没怎么刷leetcode，结果到了7月考完狗屎了，本以为没问题应该全过了，结果信号系统36分？？？不知道老师怎么改的，没办法找老师确认了结果还是一样，认命补考吧，然后不怎么开心的事情又来了，弟弟的小升初的成绩不好，花了蛮多的钱才进了学校，本来打算考研的心有了动摇了，然后到了暑假。
+</em>暑假时间只有45天，本着考不考研都要看操作系统和计算机网络的心，打算暑假看着两个来着的，当时一开始还是有打算做机器学习的心的,结果当时也就是当时提前批也马上开始了当然是那些准备工作的人了，本着学习的心我也加了校招群，然后不时的看看社区消息，结果今年算法岗爆炸了，没错爆炸了，这TM和我之前在看到的招聘标准完全不一样了，在也不是刷刷ng课程，读读西瓜书，会调几个包就能拿offer的情况了，看了那么多，也打算放下了机器学习了，然后在紧有的45天，开始了向c++后台转了,到现在为止差不多过了一遍c++primer,然后保持每天的leetcode，然后读了一点redis源码，了解了一下socket编程,计算机网络读到运输层，就没时间了，然后csapp这本书读了一点,然后好像就这样过去了暑假了，哦不对还看了大量的番（毕竟我一天到晚在家，好像就出去过一次，呆了一个小时），暑假好像就这样就要过去了，写到这里我蛮难受的。<br><em>这一年入了机器学习的坑到底是好事坏，真的是不清楚，但是花费了一年的时间，总感觉有点难受，接下来还要看更多的书，真的是要按高3的进程走一遍才赶得上。
+</em>真的是选择往往要大于努力感觉，从一开始不了解电子信息要干什么以为也是编程，选择了电子信息专业，然后到后面为了不换宿舍没有选择去转专业，然后大一学的前端，大一结束的退出，在到机器学习的学习，到后面不得不的放弃，然后开始在紧凑的时间开始不停的学，当然我并不是说学了前端和机器学习不好，但是如果一开始就是c++，或者一开始就是前端的话，就不会想我现在这样感到紧张了吧。<br>*真的感觉大学这2年过得很紧凑，可是最怕的是这样的努力没有结果，所以现在开始才要更拼，希望明年的春招能有个好的实习吧，</p>
+<hr>
+<p>关于个人的想法的变化<br><em>之前一直想关于羁绊的问题，经常一些时候想，如果自己没有羁绊，是否会过得更开心，因为这样就不要考虑任何其他人，只要照顾好自己，自己想做什么就做什么，好像很快乐，不过到今天才发现，正是因为有各种羁绊才会更快乐吧，就像和亲人的交谈就很快乐一样，虽然也会有许多关于未来的担忧，但是也自己让自己更努力，变得更强吧。
+</em>关于爱情的话，其实这个估计还得搁置一边，估计现在的自己也没有时间去顾及其他人吧。估计也是自己觉得麻烦吧<br><em>关于社会吧，我觉得年轻人真的是充满焦虑的吧，这几天来房租也在疯狂的上涨了，从11年还是多少年来的房价的上涨让人绝望，到现在的房租的上涨让人绝望，然后还有996让人习以为常的工作时间，或者更严重的加班情况，真的觉得社会不该是这样的，不过自己也没有任何办法，只有努力让自己看到一些希望吧。
+</em>关于孤独的问题吧，虽然暑假没有人联系，但是和上个暑假不同了，因为完全没时间来感受什么孤独了，光是一天的安排就足够了，果然孤独什么的还是闲下来才有的感觉呢，虽然有时候还是会有点.<br><em>关于玉山这座县城，今年暑假没怎么出去，不过每天晚上月光洒进房间真的蛮美丽的，这时候还可以看到大片的白云呢。
+</em>关于上一年的目标今年除了cet4其他好像都没实现来着，比较选择发生了改变了。</p>
+<hr>
+<p>关于未来的展望<br>*也就没有太多具体的东西了吧，只希望一切顺利了。</p>
+
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2017/09/17/最大子列和算法/" rel="next" title="最大子列和算法">
+                <i class="fa fa-chevron-left"></i> 最大子列和算法
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+  <div class="comments" id="comments">
+    
+  </div>
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    
+    <div class="sidebar-inner">
+
+      
+
+      
+
+      <section class="site-overview sidebar-panel sidebar-panel-active">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+          <img class="site-author-image" itemprop="image"
+               src="/uploads/touxiang.png"
+               alt="逸轩" />
+          <p class="site-author-name" itemprop="name">逸轩</p>
+           
+              <p class="site-description motion-element" itemprop="description">一个迷茫的人的成长</p>
+          
+        </div>
+        <nav class="site-state motion-element">
+
+          
+            <div class="site-state-item site-state-posts">
+              <a href="/archives/">
+                <span class="site-state-item-count">5</span>
+                <span class="site-state-item-name">日志</span>
+              </a>
+            </div>
+          
+
+          
+
+          
+
+        </nav>
+
+        
+
+        <div class="links-of-author motion-element">
+          
+        </div>
+
+        
+        
+
+        
+        
+
+        
+
+
+      </section>
+
+      
+
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright" >
+  
+  &copy; 
+  <span itemprop="copyrightYear">2018</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">逸轩</span>
+</div>
+
+
+<div class="powered-by">
+  由 <a class="theme-link" href="https://hexo.io">Hexo</a> 强力驱动
+</div>
+
+<div class="theme-info">
+  主题 -
+  <a class="theme-link" href="https://github.com/iissnan/hexo-theme-next">
+    NexT.Muse
+  </a>
+</div>
+
+
+        
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+      </div>
+    
+
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+
+  
+  <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+
+  
+  <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+
+  
+  <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.1"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.1"></script>
+
+
+
+  
+  
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.1"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.1"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.1"></script>
+
+
+
+  
+
+
+  
+
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+</body>
+</html>
